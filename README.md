@@ -1,13 +1,14 @@
 # Summary
 
 This sample is a Teams Tab created using the Teams Yeoman Generator. It uses the Microsoft Graph Toolkit (MGT) to access Microsoft Graph in the back.
-There are two versions, one uses a Login component to let the user sign in and afterwards show up to 5 recent contacts with the People compoent.
+There are two versions, one uses a Login component to let the user sign in and afterwards show up to 5 recent contacts with the People component.
 The other version uses Teams SSO with the on-behalf flow and that access token is used for the MGT custom provider and afterwards call the People component.
 
 |Result with Login | Result with SSO|
 :-------------------------:|:-------------------------:
 ![Result with Login](https://mmsharepoint.files.wordpress.com/2021/09/05mgt_login_result.png) | ![Result with SSO](https://mmsharepoint.files.wordpress.com/2021/09/06mgt_sso_result.png)
 
+For further details see the author's [blog post](https://mmsharepoint.wordpress.com/2021/09/01/microsoft-graph-toolkit-in-a-teams-application-with-yo-teams-and-sso/)
 
 ## Version history
 
@@ -22,7 +23,7 @@ Version|Date|Author|Comments
 ## Minimal Path to Awesome
 - Clone the repository
     ```bash
-    git clone https://github.com/PnP/teams-dev-samples.git
+    git clone https://github.com/mmsharepoint/tab-mgt-person.git
     ```
 
 - In a console, navigate to `samples/tab-mgt-person`
@@ -42,7 +43,7 @@ Version|Date|Author|Comments
     ```bash
     gulp start-ngrok
     ```
-- You will need to register an app in Azure AD [also described here](https://mmsharepoint.wordpress.com//)
+- You will need to register an app in Azure AD [also described here](https://mmsharepoint.wordpress.com/2021/09/01/microsoft-graph-toolkit-in-a-teams-application-with-yo-teams-and-sso/)
   - with redirect uri https://<NGrok-Url>/auth.html
   - Make it multi-tenant
   - with client secret
