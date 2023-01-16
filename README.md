@@ -47,11 +47,23 @@ Version|Date|Author|Comments
   - with redirect uri https://<NGrok-Url>/auth.html
   - Make it multi-tenant
   - with client secret
-  - with **delegated** permissions User.Read and People.Read
+  - with **delegated** permissions User.Read and User.ReadBasic.All
   - With exposed Api "access_as_user" and App ID Uri api://<NGrok-Url>/<App ID>
   - With the client IDs for Teams App and Teams Web App 1fec8e78-bce4-4aaf-ab1b-5451cc387264 and 5e3ce6c0-2b1f-4285-8d4b-75ee78787346
 - Also add the app ID and its secret to .env (taken from .env-sample) as TAB_APP_ID= and 
     - add the secret to TAB_APP_SECRET"
+- Add the ngrok url as PublicHostname to .env
+In another console:
+- Package the app
+    ```bash
+    gulp manifest
+    ```
+- Start the app
+    ```bash
+    gulp serve --debug
+    ```
+- Upload the app as a custom one or to your tenant's app catalog
+- Add it to a Team of your choice
 
 
 
